@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "https://hms-backend-deployment-gx72.vercel.app/api/v1/user/login",
+          "http://localhost:5000/api/v1/user/login",
           { email, password, confirmPassword, role: "Admin" },
           {
             withCredentials: true,

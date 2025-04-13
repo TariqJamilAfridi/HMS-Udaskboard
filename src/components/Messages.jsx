@@ -12,7 +12,7 @@ const Messages = () => {
     const fetchMessages = async () => {
       try {
         const { data } = await axios.get(
-          "https://hms-backend-deployment-gx72.vercel.app/api/v1/message/getall",
+          "http://localhost:5000/api/v1/message/getall",
           { withCredentials: true } // Ensure cookies are sent
         );
         console.log("Fetched Data: ", data); // Log the fetched data for debugging
