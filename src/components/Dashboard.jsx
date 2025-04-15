@@ -16,7 +16,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "https://hms-backend-tj-48lx.vercel.app//api/v1/appointment/getall",
+          "https://hms-backend-tj-48lx.vercel.app/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointment || []); // Ensure appointments are set correctly
@@ -30,7 +30,7 @@ const Dashboard = () => {
     const fetchDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "https://hms-backend-tj-48lx.vercel.app//api/v1/doctor/getall", // Assuming this endpoint exists
+          "https://hms-backend-tj-48lx.vercel.app/api/v1/doctor/getall", // Assuming this endpoint exists
           { withCredentials: true }
         );
         console.log("Doctors data:", data); // Log doctors data to inspect the response
@@ -48,7 +48,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `https://hms-backend-tj-48lx.vercel.app//api/v1/appointment/update/${appointmentId}`,
+        `https://hms-backend-tj-48lx.vercel.app/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );

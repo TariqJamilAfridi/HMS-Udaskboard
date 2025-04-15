@@ -18,7 +18,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://hms-backend-tj-48lx.vercel.app//api/v1/user/admin/logout", {
+      .get("https://hms-backend-tj-48lx.vercel.app/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {
